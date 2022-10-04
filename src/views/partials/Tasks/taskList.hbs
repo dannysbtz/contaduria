@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    {{#each tasks}}
+      <li>
+        <h3>{{title}}</h3>
+        <p>{{description}}</p></li>
+      <a href="/edit/{{_id}}/task">Edit</a>
+      <form action="/delete/{{_id}}/task?_method=DELETE" method="POST">
+      <button> Eliminar</button>
+      </form>
+    {{/each}}
+  </ul>
+</div>
